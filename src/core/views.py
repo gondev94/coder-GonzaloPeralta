@@ -17,4 +17,4 @@ def saludar_con_parametros(request, nombre: str, apellido: str):
 
 def index(request):
     contex = {"año" : 2024}
-    return render(request, "core/index.html", contex)
+    return render(request, "core/index.html", contex) 
