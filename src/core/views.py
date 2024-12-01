@@ -31,6 +31,6 @@ def tirar_dado(request):
         mensaje = f'Has tirado eldado y has sacado ¡{tiro_de_dado}! ¡Sigue intentado!'
         
     datos = {'title': 'Tiro de dados', 
-             'mensaje': 'Buenas',
+             'mensaje': mensaje,
              'fecha': datetime.now()}
     return render(request, 'core/dados.html', context=datos)
