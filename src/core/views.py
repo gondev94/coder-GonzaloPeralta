@@ -34,3 +34,8 @@ def tirar_dado(request):
              'mensaje': mensaje,
              'fecha': datetime.now()}
     return render(request, 'core/dados.html', context=datos)
+
+def eje1(request):
+    nombre = "Gonzalo"
+    apellido = "Peralta"
+    return render(request, "core/ejercicio.html", {'nombre': nombre}, {'apellido': apellido})
