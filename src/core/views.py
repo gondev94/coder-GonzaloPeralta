@@ -3,6 +3,7 @@ from django.http import HttpResponse
 
 
 
+
 # Create your views here.
 
 def saludar(request):
@@ -23,11 +24,13 @@ def index(request):
 def tirar_dado(request):
     from datetime import datetime
     from random import randint
-    tiro_de_dado = randint (1,6)
+    tiro_de_dado = randint(1,6)
     if tiro_de_dado == 6:
         mensaje = f'Has tirado el dado y has sacado ¡{tiro_de_dado}! ¡Ganaste!'
     else:
         mensaje = f'Has tirado eldado y has sacado ¡{tiro_de_dado}! ¡Sigue intentado!'
         
-    datos = {'title': 'Tiro de dados'}
+    datos = {'title': 'Tiro de dados', 
+             'mensaje': 'Buenas',
+             'fecha': datetime.now()}
     return render(request, 'core/dados.html', context=datos)
